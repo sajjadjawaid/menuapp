@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;1,500&display=swap');
+:root{
+    --green: #27ae60;
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow:0 .5rem 1.5rem rgb(0,0,0);
+}
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .7s linear;
+}
+body{
+    background-color: rgba(190, 189, 189, 0.486);
+    position: absolute;
+}
+
+html{
+    font-size: 72.5%;
+    overflow: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+
+}
+
+header{
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 7%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo {
+    color: var(--black);
+    font-size: 20px; 
+    
+    font-weight: bolder;
+    margin-top: 18px; 
+    
+}
+
+header .logo  i{
+    color: var(--green);
+    
+}
+  header .navbar{
+    margin-top: 18px;
+}  
+
+header .navbar a{
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    padding: 1rem 2.5rem;
+    color: black;
+   
+}
+header .navbar a.active,
+header .navbar a:hover{
+    color:black;
+    background-color: rgba(212, 32, 32, 0.897);
+}
+
+header .icons i,header .icons a{ 
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--black);
+    border-radius:20%;
+    background: #eee;
+
+}
+header .icons i:hover,header .icons a:hover{
+    color: #eee;
+    background: rgba(212, 32, 32, 0.897);
+    transform: rotate(360deg);
+}
+ header .icons #bars{
+     display: none;
+ } 
+
+.breakfast{
+    margin-top: 100px;
+    margin-left: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center;
+    align-content: center; */
+    
+    width: 1200px;
+    gap: 100px;
+    
+}
+.lunch{
+    margin-top: 65px;
+    margin-left: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center;
+    align-content: center; */
+    
+    width: 1200px;
+    gap: 100px;
+    
+    
+    
+}
+.dinner{
+    margin-top: 65px;
+    margin-left: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center;
+    align-content: center; */
+    
+    width: 1200px;
+    gap: 100px;
+    
+    
+}
+.dessert{
+    margin-top: 65px;
+    margin-left: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center;
+    align-content: center; */
+    
+    width: 1200px;
+    gap: 100px;
+    
+    
+}
+
+
+
+
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+        
+    
+    }
+    header {
+        padding:1rem 2rem;
+    }
+
+}
+
+@media (max-width:768px){
+    header .icons #bars{
+        display: inline-block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left:0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgb(0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .card{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .card.on{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        
+        position: relative;
+        top: 350px;
+    }
+    header .navbar.on{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        
+    }
+
+    header .navbar a{
+        display: flex;
+        justify-content: center;
+        padding:1.5rem;
+        margin:1rem;
+        font-size: 2rem;
+        background:#eee;
+    }
+    
+}
+
+/* @media (max-width:768px) {
+    .card{
+        color: red;
+        position: relative;
+        top: 350px;
+    }
+} */
